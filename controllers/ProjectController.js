@@ -1,8 +1,9 @@
-portfolio.controller('ProjectCtrl', function($scope, $stateParams) {
-    $scope.apple = {type: "Apple", price: 4};
-    $scope.banana = {type: "Banana", price: 2};
-    $scope.melon = {type: "Melon", price: 44};
-    $scope.grape = {type: "Grape", price: 21};
+portfolio.controller('ProjectCtrl', function($scope, ProjectsFactory, $stateParams) {
 
-    $scope.result = "aa";
+    $scope.apple = ProjectsFactory.apple;
+    $scope.grape = ProjectsFactory.grape;
+    $scope.melon = ProjectsFactory.melon;
+    $scope.banana = ProjectsFactory.banana;
+
+    $scope.result = "";
 });
